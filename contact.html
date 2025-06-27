@@ -1,198 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CSF Uniforms</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919845429880" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="CSF Uniforms">
-                <span>CSF Uniforms</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="products.html">Products</a>
-                <a href="contact.html" class="active">Contact</a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<div class="contact-form slide-right">
+    <h2>Send Us a Message</h2>
+    
+    <!-- Enhanced Contact Form with Multiple Submission Options -->
+    <form id="csfContactForm" class="validate-form">
+        <!-- Formspree as Primary Submission Method -->
+        <input type="hidden" name="_formsubmit_id" value="csf_uniforms_contact">
+        
+        <div class="form-group">
+            <label for="name">Your Name*</label>
+            <input type="text" id="name" name="name" required minlength="2" class="input-field">
+            <span class="validation-error"></span>
         </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="slide-up">Contact Us</h1>
-            <p class="slide-up">Get in touch for inquiries, quotes, or consultations</p>
+        
+        <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required class="input-field">
+            <span class="validation-error"></span>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info slide-left">
-                    <h2>Our Contact Information</h2>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>50th Main Road, near Dayanand Sagar College, 1st Stage, Kumaraswamy Layout, Bengaluru, Karnataka, India</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+919845429880">+91 98454 29880</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:bpnaresh@gmail.com">bpnaresh@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Saturday: 09:00 AM – 08:00 PM</p>
-                            <p>Sunday: Closed</p>
-                        </div>
-                    </div>
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/919845429880" class="btn btn-whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
-                        <a href="tel:+919845429880" class="btn btn-call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form slide-right">
-                    <h2>Send Us a Message</h2>
-                    <form action="https://formspree.io/f/bpnaresh@gmail.com" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="input-field">
+            <span class="validation-error"></span>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <h2 class="slide-up">Our Location</h2>
-            <div class="map-container fade-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0167149999997!2d77.5636675!3d12.9105847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e970640ad9%3A0x2181731184ce98b0!2sColorshine%20Fashions!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        
+        <div class="form-group">
+            <label for="subject">Subject*</label>
+            <select id="subject" name="subject" required class="input-field">
+                <option value="" disabled selected>Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Quote Request">Quote Request</option>
+                <option value="Custom Order">Custom Order</option>
+                <option value="Existing Order">Existing Order</option>
+            </select>
+            <span class="validation-error"></span>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content slide-up">
-                <h2>Ready to Discuss Your Uniform Needs?</h2>
-                <p>We're here to help you find the perfect uniform solution for your organization</p>
-                <div class="cta-buttons">
-                    <a href="tel:+919845429880" class="btn btn-primary">
-                        <i class="fas fa-phone"></i> Call Now
-                    </a>
-                    <a href="products.html" class="btn btn-secondary">View Products</a>
-                </div>
-            </div>
+        
+        <div class="form-group">
+            <label for="message">Your Message*</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" class="input-field"></textarea>
+            <span class="validation-error"></span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>CSF Uniforms</h3>
-                    <p>Color Shine Fashions is Bangalore's premier uniform manufacturer, delivering quality uniforms since 2005.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+        
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+                <span id="btnText">Send Message</span>
+                <div id="btnSpinner" class="spinner hidden">
+                    <div class="spinner-dot"></div>
+                    <div class="spinner-dot"></div>
+                    <div class="spinner-dot"></div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="products.html">School Uniforms</a></li>
-                        <li><a href="products.html">Hospital Uniforms</a></li>
-                        <li><a href="products.html">Corporate Uniforms</a></li>
-                        <li><a href="products.html">Industrial Wear</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 50th Main Road, near Dayanand Sagar College, Bengaluru</li>
-                        <li><i class="fas fa-phone"></i> +91 98454 29880</li>
-                        <li><i class="fas fa-envelope"></i> bpnaresh@gmail.com</li>
-                        <li><i class="fas fa-clock"></i> 09:00 AM – 08:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 CSF Uniforms. All Rights Reserved.</p>
-            </div>
+            </button>
+            
+            <p class="form-note">
+                <i class="fas fa-info-circle"></i> If the form doesn't work, please email us directly at 
+                <a href="mailto:bpnaresh@gmail.com">bpnaresh@gmail.com</a>
+            </p>
         </div>
-    </footer>
+    </form>
+</div>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+<style>
+    /* Validation Styles */
+    .validation-error {
+        color: #e74c3c;
+        font-size: 0.8rem;
+        display: none;
+        margin-top: 5px;
+    }
+    
+    .input-field.invalid {
+        border-color: #e74c3c;
+    }
+    
+    .input-field.invalid + .validation-error {
+        display: block;
+    }
+    
+    /* Spinner Animation */
+    .spinner {
+        display: inline-flex;
+        gap: 4px;
+        margin-left: 10px;
+    }
+    
+    .spinner-dot {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+        animation: bounce 1.4s infinite ease-in-out both;
+    }
+    
+    .spinner-dot:nth-child(1) { animation-delay: -0.32s; }
+    .spinner-dot:nth-child(2) { animation-delay: -0.16s; }
+    
+    @keyframes bounce {
+        0%, 80%, 100% { transform: scale(0); }
+        40% { transform: scale(1); }
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .form-note {
+        font-size: 0.85rem;
+        color: #666;
+    }
+    
+    .form-note i {
+        margin-right: 5px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('csfContactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnSpinner = document.getElementById('btnSpinner');
+    
+    // Form validation
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validate all fields
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            field.classList.remove('invalid');
+            const errorMsg = field.nextElementSibling;
+            
+            if (field.value.trim() === '') {
+                field.classList.add('invalid');
+                errorMsg.textContent = 'This field is required';
+                errorMsg.style.display = 'block';
+                isValid = false;
+            } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                field.classList.add('invalid');
+                errorMsg.textContent = 'Please enter a valid email address';
+                errorMsg.style.display = 'block';
+                isValid = false;
+            } else if (field.id === 'phone' && field.value && !/^\d{10}$/.test(field.value)) {
+                field.classList.add('invalid');
+                errorMsg.textContent = 'Please enter a 10-digit phone number';
+                errorMsg.style.display = 'block';
+                isValid = false;
+            } else {
+                errorMsg.style.display = 'none';
+            }
+        });
+        
+        if (!isValid) return;
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending...';
+        btnSpinner.classList.remove('hidden');
+        
+        try {
+            // Try Formspree first
+            const formspreeResponse = await fetch('https://formspree.io/f/bpnaresh@gmail.com', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (formspreeResponse.ok) {
+                // Success - redirect to thank you page
+                window.location.href = '/thank-you.html';
+                return;
+            }
+            
+            // Fallback 1: FormSubmit
+            const formsubmitResponse = await fetch('https://formsubmit.co/ajax/bpnaresh@gmail.com', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (formsubmitResponse.ok) {
+                window.location.href = '/thank-you.html';
+                return;
+            }
+            
+            // Fallback 2: Mailto link
+            const formData = new FormData(form);
+            const subject = encodeURIComponent(formData.get('subject'));
+            const body = encodeURIComponent(
+                `Name: ${formData.get('name')}\n\n` +
+                `Email: ${formData.get('email')}\n\n` +
+                `Phone: ${formData.get('phone')}\n\n` +
+                `Message: ${formData.get('message')}`
+            );
+            
+            window.location.href = `mailto:bpnaresh@gmail.com?subject=${subject}&body=${body}`;
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('Failed to send message. Please email us directly at bpnaresh@gmail.com');
+        } finally {
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.textContent = 'Send Message';
+            btnSpinner.classList.add('hidden');
+        }
+    });
+    
+    // Real-time validation
+    form.querySelectorAll('.input-field').forEach(field => {
+        field.addEventListener('input', function() {
+            if (this.checkValidity()) {
+                this.classList.remove('invalid');
+                this.nextElementSibling.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
